@@ -1,0 +1,40 @@
+@TestProject_HostAddress = http://localhost:5066
+
+GET {{TestProject_HostAddress}}/weatherforecast
+Accept: application/json
+
+###
+
+GET {{TestProject_HostAddress}}/weatherforecast/4
+Accept: application/json
+
+###
+
+POST {{TestProject_HostAddress}}/weatherforecast
+Accept: application/json
+Content-Type: application/json
+
+{
+  "date": "2025-01-13",
+  "temperatureC": 12,
+  "summary": "Freezing"
+}
+
+###
+
+PUT {{TestProject_HostAddress}}/weatherforecast/4
+Accept: application/json
+Content-Type: application/json
+
+{
+  "date": "2025-11-11",
+  "temperatureC": 20,
+  "summary": "Breezy"
+}
+
+###
+
+DELETE {{TestProject_HostAddress}}/weatherforecast/4
+Accept: application/json
+
+###
